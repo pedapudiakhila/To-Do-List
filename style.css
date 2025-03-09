@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #000430;
+    --secondarybackground: #171c48;
+    --text: #fff;
+    --purple: #828dff;
+    --teal: #24feee;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 150px;
+    max-width: 500px;
+}
+
+.stats-container {
+    padding: 30px;
+    border: 2px solid var(--purple);
+    border-radius: 20px;
+    display: flex;
+    gap: 18px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.details {
+    width: 100%;
+}
+
+#numbers {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--purple);
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#progress-bar {
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: var(--secondarybackground);
+}
+
+#progress-line {
+    width: 0%;
+    height: 10px;
+    background-color: var(--teal);
+    border-radius: 12px;
+    transition: width 0.3s ease-in-out;
+}
+
+form {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    gap: 12px;
+}
+
+input {
+    flex: 1;
+    padding: 16px;
+    border: 1px solid var(--purple);
+    background-color: var(--secondarybackground);
+    border-radius: 10px;
+    color: var(--text);
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--purple);
+    color: var(--text);
+    font-size: 30px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+#task-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 10px;
+    width: 100%;
+    list-style: none;
+}
+
+.taskItem {
+    display: flex;
+    background-color: var(--secondarybackground);
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.task input {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.task.completed {
+    text-decoration: line-through;
+    color: var(--teal);
+}
+
+.taskItem img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
